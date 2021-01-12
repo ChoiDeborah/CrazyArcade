@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Default">
+      <UniqueIdentifier>{ca0ae933-680e-4db5-9170-8185355499e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="00.MainGame">
+      <UniqueIdentifier>{98f86a75-5938-4253-84cd-1ba6fa07af9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Obj">
+      <UniqueIdentifier>{d9c2800f-0214-453d-b8b8-13e3d4a30b27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.Line">
+      <UniqueIdentifier>{ff71d025-6e9c-49f0-9cc3-e195f6e6233b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="97.Manager">
+      <UniqueIdentifier>{38417481-4049-4746-a06d-508ada2d8e05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="98.Pattern">
+      <UniqueIdentifier>{2fe74d3b-f10d-4390-ac07-fbd54481924a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03.Bitmap">
+      <UniqueIdentifier>{4e5e78f2-079b-4c37-9608-85be30e277e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="99.Headers">
+      <UniqueIdentifier>{f07fe511-ff53-4ccc-896f-b4669101be0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Obj\Player">
+      <UniqueIdentifier>{82385215-a83b-435a-8e54-c37bee905d59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Obj\Monster">
+      <UniqueIdentifier>{a635d07e-09a3-4693-9733-6a225a41885d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Obj\Mouse">
+      <UniqueIdentifier>{d01695b0-96a5-4fb7-9a51-c8983a799e33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Obj\Bomb">
+      <UniqueIdentifier>{62381ee3-d6bf-499d-983d-10ebfb80f5f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="97.Manager\LineMgr">
+      <UniqueIdentifier>{7dff8f30-d7df-4ad7-a0d5-d99772c6261b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="97.Manager\BitmapMgr">
+      <UniqueIdentifier>{6ae74a4c-f156-4177-acb1-d2c637f473af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="97.Manager\CollisionMgr">
+      <UniqueIdentifier>{28b9cde5-92d0-4b0c-9fbb-c1e3647e0dfb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="97.Manager\KeyMgr">
+      <UniqueIdentifier>{23494eaa-19a9-4d16-8f8d-bc6d127791e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="97.Manager\ObjMgr">
+      <UniqueIdentifier>{8b4fdbfc-969f-4e1d-83ba-057cf3b947d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04.Scene">
+      <UniqueIdentifier>{af18f3a2-225b-41c3-8c37-28c3c5397071}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04.Scene\Logo">
+      <UniqueIdentifier>{2afef1b5-5f1e-43dd-b316-00ccd7ccf134}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04.Scene\Menu">
+      <UniqueIdentifier>{22e98783-94d1-44f5-b863-8e0f0759b61a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04.Scene\Stage">
+      <UniqueIdentifier>{db30a402-fb8f-4116-b797-a2bc8a77ce9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="97.Manager\SceneMgr">
+      <UniqueIdentifier>{2307e3a0-7078-4fdd-9fc0-f2f841e089b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Obj\Button">
+      <UniqueIdentifier>{d3b0b798-a6b3-4614-a3ae-ee83795aeca9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04.Scene\MapEditor">
+      <UniqueIdentifier>{4e60ab82-24d9-48a0-966c-04f780a6b751}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Obj\Button\MenuButton">
+      <UniqueIdentifier>{7ccbe5a4-c057-4a2e-8f83-636b0897b8c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Obj\Button\EditorButton">
+      <UniqueIdentifier>{cb6a76c3-be7a-4c9f-9d7e-d697db20e44f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Obj\Tile">
+      <UniqueIdentifier>{f7293eab-7a45-4569-b921-44b83534f517}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="97.Manager\TileMgr">
+      <UniqueIdentifier>{6159fab5-6cf1-45c2-b838-c181d25669d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="97.Manager\GameMgr">
+      <UniqueIdentifier>{be076d95-45aa-426c-816d-4247d671f432}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TODO">
+      <UniqueIdentifier>{55d7660c-0684-4975-a509-742fe2bd6d3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Obj\Item">
+      <UniqueIdentifier>{789783ac-486f-4152-bbcf-cfb834fcd13d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Obj\Boss">
+      <UniqueIdentifier>{0aab82e3-aef1-4593-8e6b-a982424875a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="97.Manager\SoundMgr">
+      <UniqueIdentifier>{8b7f06c1-e5ab-4410-b0cc-746451bf3b60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04.Scene\End">
+      <UniqueIdentifier>{190cc7c0-8998-4f10-b766-ebc183f6b23f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CrazyArcade.h">
+      <Filter>Default</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Default</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Default</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Default</Filter>
+    </ClInclude>
+    <ClInclude Include="Enum.h">
+      <Filter>99.Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Typedef.h">
+      <Filter>99.Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Obj.h">
+      <Filter>01.Obj</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>01.Obj\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Mouse.h">
+      <Filter>01.Obj\Mouse</Filter>
+    </ClInclude>
+    <ClInclude Include="Monster.h">
+      <Filter>01.Obj\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="Bomb.h">
+      <Filter>01.Obj\Bomb</Filter>
+    </ClInclude>
+    <ClInclude Include="Line.h">
+      <Filter>02.Line</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionMgr.h">
+      <Filter>97.Manager\CollisionMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="LineMgr.h">
+      <Filter>97.Manager\LineMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyMgr.h">
+      <Filter>97.Manager\KeyMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="MyBitmap.h">
+      <Filter>03.Bitmap</Filter>
+    </ClInclude>
+    <ClInclude Include="BitmapMgr.h">
+      <Filter>97.Manager\BitmapMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="AbstractFactory.h">
+      <Filter>98.Pattern</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjMgr.h">
+      <Filter>97.Manager\ObjMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>04.Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneMgr.h">
+      <Filter>97.Manager\SceneMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="MyMenu.h">
+      <Filter>04.Scene\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Stage.h">
+      <Filter>04.Scene\Stage</Filter>
+    </ClInclude>
+    <ClInclude Include="MapEditor.h">
+      <Filter>04.Scene\MapEditor</Filter>
+    </ClInclude>
+    <ClInclude Include="Logo.h">
+      <Filter>04.Scene\Logo</Filter>
+    </ClInclude>
+    <ClInclude Include="MyButton.h">
+      <Filter>01.Obj\Button\MenuButton</Filter>
+    </ClInclude>
+    <ClInclude Include="Tile.h">
+      <Filter>01.Obj\Tile</Filter>
+    </ClInclude>
+    <ClInclude Include="TileMgr.h">
+      <Filter>97.Manager\TileMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="GameMgr.h">
+      <Filter>97.Manager\GameMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="Item.h">
+      <Filter>01.Obj\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="Stage2.h">
+      <Filter>04.Scene\Stage</Filter>
+    </ClInclude>
+    <ClInclude Include="Stage3.h">
+      <Filter>04.Scene\Stage</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss.h">
+      <Filter>01.Obj\Boss</Filter>
+    </ClInclude>
+    <ClInclude Include="ExtraBomb.h">
+      <Filter>01.Obj\Bomb</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundMgr.h">
+      <Filter>97.Manager\SoundMgr</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame.h">
+      <Filter>01.Obj</Filter>
+    </ClInclude>
+    <ClInclude Include="LastScene.h">
+      <Filter>04.Scene\End</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Default</Filter>
+    </ClCompile>
+    <ClCompile Include="CrazyArcade.cpp">
+      <Filter>Default</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame.cpp">
+      <Filter>00.MainGame</Filter>
+    </ClCompile>
+    <ClCompile Include="Obj.cpp">
+      <Filter>01.Obj</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>01.Obj\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Mouse.cpp">
+      <Filter>01.Obj\Mouse</Filter>
+    </ClCompile>
+    <ClCompile Include="Monster.cpp">
+      <Filter>01.Obj\Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="Bomb.cpp">
+      <Filter>01.Obj\Bomb</Filter>
+    </ClCompile>
+    <ClCompile Include="Line.cpp">
+      <Filter>02.Line</Filter>
+    </ClCompile>
+    <ClCompile Include="LineMgr.cpp">
+      <Filter>97.Manager\LineMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="KeyMgr.cpp">
+      <Filter>97.Manager\KeyMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="MyBitmap.cpp">
+      <Filter>03.Bitmap</Filter>
+    </ClCompile>
+    <ClCompile Include="BitmapMgr.cpp">
+      <Filter>97.Manager\BitmapMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjMgr.cpp">
+      <Filter>97.Manager\ObjMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>04.Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Logo.cpp">
+      <Filter>04.Scene\Logo</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneMgr.cpp">
+      <Filter>97.Manager\SceneMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="MyMenu.cpp">
+      <Filter>04.Scene\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="MapEditor.cpp">
+      <Filter>04.Scene\MapEditor</Filter>
+    </ClCompile>
+    <ClCompile Include="MyButton.cpp">
+      <Filter>01.Obj\Button\MenuButton</Filter>
+    </ClCompile>
+    <ClCompile Include="Tile.cpp">
+      <Filter>01.Obj\Tile</Filter>
+    </ClCompile>
+    <ClCompile Include="TileMgr.cpp">
+      <Filter>97.Manager\TileMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="GameMgr.cpp">
+      <Filter>97.Manager\GameMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="Item.cpp">
+      <Filter>01.Obj\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="Stage2.cpp">
+      <Filter>04.Scene\Stage</Filter>
+    </ClCompile>
+    <ClCompile Include="Stage3.cpp">
+      <Filter>04.Scene\Stage</Filter>
+    </ClCompile>
+    <ClCompile Include="Boss.cpp">
+      <Filter>01.Obj\Boss</Filter>
+    </ClCompile>
+    <ClCompile Include="ExtraBomb.cpp">
+      <Filter>01.Obj\Bomb</Filter>
+    </ClCompile>
+    <ClCompile Include="Stage.cpp">
+      <Filter>04.Scene\Stage</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionMgr.cpp">
+      <Filter>97.Manager\CollisionMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundMgr.cpp">
+      <Filter>97.Manager\SoundMgr</Filter>
+    </ClCompile>
+    <ClCompile Include="LastScene.cpp">
+      <Filter>04.Scene\End</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="small.ico">
+      <Filter>Default</Filter>
+    </Image>
+    <Image Include="CrazyArcade.ico">
+      <Filter>Default</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="CrazyArcade.rc">
+      <Filter>Default</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt">
+      <Filter>Default</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TODO.md">
+      <Filter>TODO</Filter>
+    </None>
+  </ItemGroup>
+</Project>

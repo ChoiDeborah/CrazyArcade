@@ -1,0 +1,34 @@
+#pragma once
+namespace PLAYER
+{
+	enum DIR { UP, DOWN, LEFT, RIGHT };
+}
+namespace OBJID
+{
+	enum ID { PLAYER, MONSTER, BOSS, BOMB, EXTRA_BOMB, MENUBUTTON, EDITORBUTTON, ITEM, TILE, MOUSE, END };
+}
+
+namespace DIRECTION
+{
+	enum DIR { LEFT, RIGHT, UP, DOWN, DIR_END };
+}
+
+namespace GroupID
+{
+	enum ID { BACKGROUND, GAMEOBJECT, EFFECT, UI, END };
+}
+
+namespace SceneID
+{
+	enum ID { SCENE_LOGO, SCENE_MENU, SCENE_EDIT, SCENE_STAGE, SCENE_STAGE2, SCENE_STAGE3, SCENE_END };
+}
+
+namespace BOMBTYPE
+{
+	enum TYPE { CENTER, RIGHT, LEFT, UP, DOWN, EDGE_RIGHT, EDGE_LEFT, EDGE_UP, EDGE_DOWN, FLOW_END };
+}
+
+namespace ITEM
+{
+	enum TYPE {FIRST, BOMB, BOMBLEN, SPEED, NIDDLE, SHOE, TYPE_END };
+}

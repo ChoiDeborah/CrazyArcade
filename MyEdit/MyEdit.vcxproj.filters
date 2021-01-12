@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Default">
+      <UniqueIdentifier>{e03b52c0-c633-4273-97f9-c4a62c5693fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="00.Editor">
+      <UniqueIdentifier>{e637de62-472e-4fc7-b9f3-3f3289b0b3b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.">
+      <UniqueIdentifier>{efb18064-d607-4d05-9173-44fea67092e8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MyEdit.h">
+      <Filter>Default</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Default</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Default</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Default</Filter>
+    </ClInclude>
+    <ClInclude Include="Editor.h">
+      <Filter>00.Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="EditorKeyMgr.h">
+      <Filter>01.</Filter>
+    </ClInclude>
+    <ClInclude Include="EditorLine.h">
+      <Filter>01.</Filter>
+    </ClInclude>
+    <ClInclude Include="EditorLineMgr.h">
+      <Filter>01.</Filter>
+    </ClInclude>
+    <ClInclude Include="EditorScrollMgr.h">
+      <Filter>01.</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="MyEdit.cpp">
+      <Filter>Default</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Default</Filter>
+    </ClCompile>
+    <ClCompile Include="Editor.cpp">
+      <Filter>00.Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="EditorKeyMgr.cpp">
+      <Filter>01.</Filter>
+    </ClCompile>
+    <ClCompile Include="EditorLine.cpp">
+      <Filter>01.</Filter>
+    </ClCompile>
+    <ClCompile Include="EditorLineMgr.cpp">
+      <Filter>01.</Filter>
+    </ClCompile>
+    <ClCompile Include="EditorScrollMgr.cpp">
+      <Filter>01.</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="MyEdit.ico">
+      <Filter>Default</Filter>
+    </Image>
+    <Image Include="small.ico">
+      <Filter>Default</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MyEdit.rc">
+      <Filter>Default</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt">
+      <Filter>Default</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
