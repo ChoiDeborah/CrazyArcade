@@ -43,9 +43,9 @@ void CMyButton::LateUpdate()
 			if (!lstrcmp(m_pFrameKey, L"Start1")) 
 			{
 				//CSceneMgr::Get_Instance()->SceneChange(SceneID::SCENE_STAGE);
-				//CSceneMgr::Get_Instance()->SceneChange(SceneID::SCENE_STAGE2);
-				//CSceneMgr::Get_Instance()->SceneChange(SceneID::SCENE_END);
-				CSceneMgr::Get_Instance()->SceneChange(SceneID::SCENE_STAGE);
+				CSceneMgr::Get_Instance()->SceneChange(SceneID::SCENE_STAGE2);
+				//CSceneMgr::Get_Instance()->SceneChange(SceneID::SCENE_STAGE3);
+				//CSceneMgr::Get_Instance()->SceneChange(SceneID::SCENE_STAGE);
 			}
 			else if (!lstrcmp(m_pFrameKey, L"Edit1"))
 			 	CSceneMgr::Get_Instance()->SceneChange(SceneID::SCENE_EDIT);

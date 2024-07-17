@@ -21,7 +21,7 @@ void CMonster::Initialize()
 {
 	m_tInfo.fCX = 35.f;
 	m_tInfo.fCY = 20.f;
-	m_fSpeed = 1.5f;
+	m_fSpeed = 1.0f;
 	POINT pos = CGameMgr::Get_Instance()->Get_Posiotn_From_Index(m_tIndex);
 	m_tInfo.fX = (float)pos.x;
 	m_tInfo.fY = (float)pos.y;

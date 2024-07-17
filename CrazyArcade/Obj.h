@@ -29,6 +29,21 @@ public:
 	virtual void Render(HDC hDC) = 0;
 	virtual void Release() = 0;
 public:
+	bool operator<(const CObj* other)
+	{
+		if (nullptr == other)
+			return false;
+
+		if (this->m_bFlat == true)
+			return false;
+		/*
+		if (Dst->m_bTop == true)
+			return false;
+		*/
+		return this->Get_Info().fY < other->Get_Info().fY;
+	}
+
+
 	void UpdateRect();
 	void UpdateIndex();
 	void FrameMove();
@@ -57,8 +72,5 @@ protected:
 	CObj* m_pTarget;
 	bool m_bIsInit;
 	INDEX m_tIndex;
-	
-
-
 };
 

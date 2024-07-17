@@ -15,6 +15,7 @@ public:
 		CObj* pObj = new T;
 		pObj->Initialize();
 		pObj->Set_Pos(fx, fy);
+		pObj->UpdateIndex();
 		return pObj;
 	}
 

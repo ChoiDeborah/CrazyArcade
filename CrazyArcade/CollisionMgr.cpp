@@ -178,7 +178,8 @@ void CCollisionMgr::CollisionRect(OBJLIST & DestList, OBJLIST & SourList, OBJID:
 				}
 
 				
-				if (eDestID == OBJID::PLAYER && eSourID == OBJID::EXTRA_BOMB)
+				if (eDestID == OBJID::PLAYER && 
+					(eSourID == OBJID::EXTRA_BOMB || eSourID == OBJID::BOMB))
 				{
 					dynamic_cast<CPlayer*>(pDst)->Set_State_Bubble();
 				}

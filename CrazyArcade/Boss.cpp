@@ -686,7 +686,7 @@ void CBoss::Attack(int _skill)
 
 	if (iRand == 1)
 	{
-		CSoundMgr::Get_Instance()->PlaySoundW(L"boss2.wav", CSoundMgr::MONSTER);
+		CSoundMgr::Get_Instance()->PlayBGM(L"boss2.wav", CSoundMgr::MONSTER);
 		m_dwSkillTime = GetTickCount();
 		m_eNextState = CBoss::ATTACK_1;
 		Create_Boom();
@@ -694,13 +694,13 @@ void CBoss::Attack(int _skill)
 
 	if (iRand == 2 )
 	{
-		CSoundMgr::Get_Instance()->PlaySoundW(L"boss1.wav", CSoundMgr::MONSTER);
+		CSoundMgr::Get_Instance()->PlayBGM(L"boss1.wav", CSoundMgr::MONSTER);
 		m_eNextState = CBoss::ATTACK_2_LEFT;
 	}
 
 	if (iRand == 3 )
 	{
-		CSoundMgr::Get_Instance()->PlaySoundW(L"boss1.wav", CSoundMgr::MONSTER);
+		CSoundMgr::Get_Instance()->PlayBGM(L"boss1.wav", CSoundMgr::MONSTER);
 		m_eNextState = CBoss::ATTACK_2_RIGHT;
 	}
 }
@@ -730,7 +730,7 @@ void CBoss::FrameMove()
 void CBoss::Demage()
 {
 	m_bDemage = true;
-	CSoundMgr::Get_Instance()->PlaySoundW(L"boss3.wav", CSoundMgr::MONSTER);
+	CSoundMgr::Get_Instance()->PlayBGM(L"boss3.wav", CSoundMgr::MONSTER);
 
 	m_dwDemageTime = GetTickCount();
 	m_eNextState = CBoss::HURT;
@@ -746,7 +746,7 @@ void CBoss::Start_CollisionTime()
 
 void CBoss::Set_State_Dead()
 {
-	CSoundMgr::Get_Instance()->PlaySoundW(L"boss4.wav", CSoundMgr::MONSTER);
+	CSoundMgr::Get_Instance()->PlayBGM(L"boss4.wav", CSoundMgr::MONSTER);
 	m_dwDeadTime = GetTickCount();
 	m_eNextState = DEAD;
 	

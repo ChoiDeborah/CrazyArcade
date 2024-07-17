@@ -28,7 +28,7 @@ CStage3::~CStage3()
 void CStage3::Initialize()
 {
 	CSoundMgr::Get_Instance()->PlayBGM(L"Stage3.wav");
-	CSoundMgr::Get_Instance()->PlaySoundW(L"gamestart.wav", CSoundMgr::UI);
+	CSoundMgr::Get_Instance()->PlayBGM(L"gamestart.wav", CSoundMgr::UI);
 	CGameMgr::Get_Instance()->Initialize();
 	CObjMgr::Get_Instance()->AddObject(OBJID::PLAYER, CAbstractFactory<CPlayer>::Create(10, 6));
 	CTileMgr::Get_Instance()->Load_Tile(L"../Data/Stage3.dat");
@@ -153,7 +153,7 @@ void CStage3::Render(HDC hDC)
 		if (!m_bResult)
 		{
 			m_bResult = true;
-			CSoundMgr::Get_Instance()->PlaySoundW(L"GameOver.wav", CSoundMgr::UI);
+			CSoundMgr::Get_Instance()->PlayBGM(L"GameOver.wav", CSoundMgr::UI);
 		}
 		hMemDC = CBitmapMgr::Get_Instance()->FindImage(L"GameOver");
 
@@ -177,7 +177,7 @@ void CStage3::Render(HDC hDC)
 		if (!m_bResult)
 		{
 			m_bResult = true;
-			CSoundMgr::Get_Instance()->PlaySoundW(L"GameClear.wav", CSoundMgr::UI);
+			CSoundMgr::Get_Instance()->PlayBGM(L"GameClear.wav", CSoundMgr::UI);
 		}
 		hMemDC = CBitmapMgr::Get_Instance()->FindImage(L"Clear");
 

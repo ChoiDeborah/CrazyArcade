@@ -11,13 +11,13 @@
 // Windows 헤더 파일:
 #include <windows.h>
 
-#include <Vfw.h>
 #pragma comment(lib, "vfw32.lib")
+#include <Vfw.h>
 
 #include <io.h>
 
+#pragma comment(lib, "fmod_vc.lib")
 #include "fmod.h"
-#pragma comment(lib, "fmodex_vc.lib")
 
 // C 런타임 헤더 파일입니다.
 #include <stdlib.h>

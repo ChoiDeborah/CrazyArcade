@@ -93,12 +93,16 @@ void CObjMgr::LateUpdate()
 	CCollisionMgr::CollisionRectEX(m_Objlist[OBJID::BOMB], m_Objlist[OBJID::PLAYER], OBJID::BOMB, OBJID::PLAYER);
 }
 
+
+
 void CObjMgr::Render(HDC hDC)
 {
 	for (int i = 0; i < GroupID::END; ++i)
 	{
-		m_RenderSort[i].sort(CompareY<CObj*>);
-		for (auto & pObj : m_RenderSort[i])
+		m_RenderSort[i].sort();
+		//m_RenderSort[i].sort(CompareY<CObj*>);
+		//m_RenderSort[i].sort(m_RenderSort[i].begin(),m_RenderSort[i].end(),CompareY<CObj*>);
+		for (CObj* pObj : m_RenderSort[i])
 		{
 			pObj->Render(hDC);
 
@@ -155,4 +159,12 @@ void CObjMgr::DeleteID(OBJID::ID eID)
 OBJLIST CObjMgr::Get_Objlist(OBJID::ID eID)
 {
 	return m_Objlist[eID];
+}
+
+bool CObjMgr::CompareYOrder(CObj* left, CObj* right)
+{
+	if (left->m_bFlat == true)
+		return true;
+
+	return left->Get_Info().fY < right->Get_Info().fY;
 }

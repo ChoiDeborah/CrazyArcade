@@ -69,14 +69,18 @@ void CBomb::Initialize()
 	m_tFrame.iFrameEnd = 3;
 	m_tFrame.iFrameScene = 0;
 	m_dwBoomTime = GetTickCount();
-	bArrDir[DIRECTION::DIR_END] = { 0 };
+	bArrDir[DIRECTION::DIR_END] = { 0 } ; 
 	CTileMgr::Get_Instance()->Get_Tile_Info(m_tIndex)->m_bMonsterPass = false;
 }
 
 int CBomb::Update()
 {
 	if (m_eCurState == CBomb::DESTROY || m_bIsDead)
+	{
+		// 사라 질 때 거짓으로 바꿔준다 
+		Set_Bomb_State(false, false);
 		return OBJ_DEAD;
+	}
 
 	//UpdateIndex();
 	//if (m_tIndex.x < 0 || m_tIndex.y < 0)
@@ -156,8 +160,6 @@ void CBomb::LateUpdate()
 		if (m_bIsBoom &&m_dwDestroyTime + 300 < GetTickCount())
 		{
 			m_eNextState = DESTROY;
-			// 사라 질 때 거짓으로 바꿔준다 
-			Set_Bomb_State(false, false);
 		}
 	}
 }
@@ -212,7 +214,7 @@ void CBomb::Render_Boom(HDC _hDC)
 	dynamic_cast<CExtraBomb*>(pObj)->Set_Type(BOMBTYPE::CENTER);
 	CObjMgr::Get_Instance()->AddObject(OBJID::EXTRA_BOMB, pObj);
 	// 터지고 있는 상황 업데이트
-	CGameMgr::Get_Instance()->Set_MapInfo(INDEX(m_tIndex.x, m_tIndex.y), false, true);
+	//CGameMgr::Get_Instance()->Set_MapInfo(INDEX(m_tIndex.x, m_tIndex.y), false, true);
 	// 사방향
 	// 왼쪽
 	for (int i = 1; i <= m_iLength; ++i)
@@ -243,7 +245,7 @@ bool CBomb::Dir_Tile_Check(INDEX _index, bool& _bDir)
 		// 지나갈 수 있으면
 		if (pTile->Get_IsPass())
 		{
-			CGameMgr::Get_Instance()->Set_MapInfo(_index, false, true);
+			//CGameMgr::Get_Instance()->Set_MapInfo(_index, false, false);
 			return true;
 		}
 		// 부서지면
@@ -339,7 +341,9 @@ void CBomb::UpdateState()
 	if (pMapInfo != nullptr)
 	{
 		if (pMapInfo->bIsBoom == true && m_eCurState == IDLE)
+		{
 			m_eNextState = BOOM;
+		}
 	}
 }
 
@@ -380,7 +384,8 @@ void CBomb::SceneChange()
 			m_tFrame.iFrameScene = 0;
 			break;
 		case CBomb::STATE::BOOM:
-			CSoundMgr::Get_Instance()->PlaySoundW(L"bomb2.wav", CSoundMgr::BOMB);
+			enum CHANNELID { BGM, PLAYER, MONSTER, EFFECT, BOMB, UI, MAXCHANNEL };
+			CSoundMgr::Get_Instance()->PlayBGM(L"bomb2.wav", CSoundMgr::CHANNELID::BOMB);
 			m_pFrameKey = L"Bomb1";
 			m_tFrame.dwFrameSpeed = 200;
 			m_tFrame.dwFrameTime = GetTickCount();
@@ -389,6 +394,10 @@ void CBomb::SceneChange()
 			m_tFrame.iFrameScene = 1;
 			m_iWidth = 40.f;
 			m_iHeight = 40.f;
+			Set_Bomb_State(false, true);
+			break;
+		case CBomb::STATE::DESTROY:
+			Set_Bomb_State(false, true);
 			break;
 		default:
 			break;

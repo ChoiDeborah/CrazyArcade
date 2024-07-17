@@ -49,7 +49,8 @@ void CTile::Initialize()
 
 	m_bIsPass = false;
 	m_bIsBroken = false;
-	m_bIsPush = false;	
+	m_bIsPush = false;
+	m_bIsBoom = false;
 }
 
 int CTile::Update()
@@ -131,9 +132,9 @@ void CTile::Release()
 
 void CTile::Set_Option(int _iOption)
 {
-	//CObj::UpdateIndex();
 	m_iOption = _iOption;
 	m_tPrevIndex = m_tIndex;
+	//CObj::UpdateIndex();
 
 	switch (m_iOption)
 	{

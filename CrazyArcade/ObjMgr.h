@@ -32,6 +32,7 @@ public:
 	void Release();
 	void DeleteID(OBJID::ID eID);
 	OBJLIST Get_Objlist(OBJID::ID eID);
+	bool CompareYOrder(CObj* left, CObj* right);
 
 private:
 	static CObjMgr* m_pInstance;

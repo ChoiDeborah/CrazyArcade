@@ -11,8 +11,7 @@ public:
 	void Release();
 
 public:
-	void PlaySound(TCHAR* pSoundKey, CHANNELID eID);
-	void PlayBGM(TCHAR* pSoundKey);
+	void PlayBGM(TCHAR* pSoundKey, CHANNELID eID = BGM);
 	void StopSound(CHANNELID eID);
 	void StopAll();
 private:
@@ -24,5 +23,8 @@ private:
 	FMOD_CHANNEL* m_pChannel[MAXCHANNEL];
 	//사운드 채널 객체및 장치를 관리할 객체 
 	FMOD_SYSTEM* m_pSystem;
+
+	TCHAR* m_pSoundKey = nullptr;
+	intptr_t m_hFile;
 };
 

@@ -29,7 +29,7 @@ CStage2::~CStage2()
 void CStage2::Initialize()
 {
 	CSoundMgr::Get_Instance()->PlayBGM(L"Stage1.wav");
-	CSoundMgr::Get_Instance()->PlaySoundW(L"gamestart.wav", CSoundMgr::UI);
+	CSoundMgr::Get_Instance()->PlayBGM(L"gamestart.wav", CSoundMgr::UI);
 	CGameMgr::Get_Instance()->Initialize();
 	// 타일 로드 전 타일 오브젝트 리스트 비워주기
 
@@ -174,7 +174,7 @@ void CStage2::Render(HDC hDC)
 		if (!m_bResult)
 		{
 			m_bResult = true;
-			CSoundMgr::Get_Instance()->PlaySoundW(L"GameOver.wav", CSoundMgr::UI);
+			CSoundMgr::Get_Instance()->PlayBGM(L"GameOver.wav", CSoundMgr::UI);
 		}
 		hMemDC = CBitmapMgr::Get_Instance()->FindImage(L"GameOver");
 
@@ -195,7 +195,7 @@ void CStage2::Render(HDC hDC)
 		if (!m_bResult)
 		{
 			m_bResult = true;
-			CSoundMgr::Get_Instance()->PlaySoundW(L"GameClear.wav", CSoundMgr::UI);
+			CSoundMgr::Get_Instance()->PlayBGM(L"GameClear.wav", CSoundMgr::UI);
 		}
 		hMemDC = CBitmapMgr::Get_Instance()->FindImage(L"Clear");
 

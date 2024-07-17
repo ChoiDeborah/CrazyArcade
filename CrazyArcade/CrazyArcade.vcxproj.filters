@@ -103,6 +103,9 @@
     <Filter Include="04.Scene\End">
       <UniqueIdentifier>{190cc7c0-8998-4f10-b766-ebc183f6b23f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="FMOD">
+      <UniqueIdentifier>{f5c8b7b9-1888-4696-8767-cf3d29a8196e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CrazyArcade.h">
@@ -215,6 +218,30 @@
     </ClInclude>
     <ClInclude Include="LastScene.h">
       <Filter>04.Scene\End</Filter>
+    </ClInclude>
+    <ClInclude Include="fmod.h">
+      <Filter>FMOD</Filter>
+    </ClInclude>
+    <ClInclude Include="fmod.hpp">
+      <Filter>FMOD</Filter>
+    </ClInclude>
+    <ClInclude Include="fmod_codec.h">
+      <Filter>FMOD</Filter>
+    </ClInclude>
+    <ClInclude Include="fmod_common.h">
+      <Filter>FMOD</Filter>
+    </ClInclude>
+    <ClInclude Include="fmod_dsp.h">
+      <Filter>FMOD</Filter>
+    </ClInclude>
+    <ClInclude Include="fmod_dsp_effects.h">
+      <Filter>FMOD</Filter>
+    </ClInclude>
+    <ClInclude Include="fmod_errors.h">
+      <Filter>FMOD</Filter>
+    </ClInclude>
+    <ClInclude Include="fmod_output.h">
+      <Filter>FMOD</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -336,6 +363,12 @@
   <ItemGroup>
     <None Include="TODO.md">
       <Filter>TODO</Filter>
+    </None>
+    <None Include="fmod_dsp.cs">
+      <Filter>FMOD</Filter>
+    </None>
+    <None Include="fmod_errors.cs">
+      <Filter>FMOD</Filter>
     </None>
   </ItemGroup>
 </Project>

@@ -68,12 +68,13 @@ int CPlayer::Update()
 		m_eNextState = DEAD;
 		CGameMgr::Get_Instance()->m_bGameLose = true;
 	}
+	CObj::UpdateIndex();
 	SceneChange();
 
 	if(m_eCurState != CPlayer::UNDEAD 
 		&& m_eCurState != CPlayer::DEAD)
 		KeyCheck();
-	CObj::UpdateIndex();
+	
 
 	
 	FrameMove();
@@ -183,7 +184,7 @@ void CPlayer::KeyCheck()
 	
 	if (m_eCurState == BUBBLE)
 		m_fSpeed = 0.3f;
-	else m_fSpeed = 3.0f;
+	else m_fSpeed = 1.5f;
 
 	if (GetAsyncKeyState(VK_UP))
 	{
@@ -258,7 +259,7 @@ void CPlayer::KeyCheck()
 			{
 				m_bIsDrop = true;
 				m_dwCreateBoomTime = GetTickCount();
-				CSoundMgr::Get_Instance()->PlaySoundW(L"bomb1.wav", CSoundMgr::PLAYER);
+				CSoundMgr::Get_Instance()->PlayBGM(L"bomb1.wav", CSoundMgr::PLAYER);
 				// 맵 정보에 플레이어 인덱스로 존재하고 터지지 않는다.
 				CGameMgr::Get_Instance()->Set_MapInfo(m_tIndex, true, false);
 				// 캐릭터 위치 기준 가장 가까운 타일 위치 반환
@@ -286,7 +287,7 @@ void CPlayer::SceneChange()
 			m_tFrame.iFrameScene = 0;
 			break;
 		case CPlayer::DOWN:
-			m_tFrame.dwFrameSpeed = 100;
+			m_tFrame.dwFrameSpeed = 50;
 			m_tFrame.dwFrameTime = GetTickCount();
 			m_tFrame.iFrameStart = 0;
 			m_tFrame.iFrameEnd = 4;
@@ -314,7 +315,7 @@ void CPlayer::SceneChange()
 			m_tFrame.iFrameScene = 0;
 			break;
 		case CPlayer::BUBBLE:
-			CSoundMgr::Get_Instance()->PlaySoundW(L"bomb3.wav", CSoundMgr::PLAYER);
+			CSoundMgr::Get_Instance()->PlayBGM(L"bomb3.wav", CSoundMgr::PLAYER);
 			m_tFrame.dwFrameSpeed = 200;
 			m_tFrame.dwFrameTime = GetTickCount();
 			m_pFrameKey = L"bazzi_bubble";
@@ -325,7 +326,7 @@ void CPlayer::SceneChange()
 			m_bIsBubble = true;
 			break;
 		case CPlayer::DEAD:
-			CSoundMgr::Get_Instance()->PlaySoundW(L"dead.wav", CSoundMgr::PLAYER);
+			CSoundMgr::Get_Instance()->PlayBGM(L"dead.wav", CSoundMgr::PLAYER);
 			m_tFrame.dwFrameSpeed = 100;
 			m_pFrameKey = L"bazzi_dead";
 			m_tFrame.dwFrameTime = GetTickCount();
@@ -334,7 +335,7 @@ void CPlayer::SceneChange()
 			m_tFrame.iFrameScene = 0;
 			break;
 		case CPlayer::UNDEAD:
-			CSoundMgr::Get_Instance()->PlaySoundW(L"niddle.wav", CSoundMgr::PLAYER);
+			CSoundMgr::Get_Instance()->PlayBGM(L"niddle.wav", CSoundMgr::PLAYER);
 			m_tFrame.dwFrameSpeed = 100;
 			m_tFrame.dwFrameTime = GetTickCount();
 			m_pFrameKey = L"bazzi_undead";
@@ -403,7 +404,7 @@ void CPlayer::FrameMove()
 
 void CPlayer::Take_Item(int _iItemType)
 {
-	CSoundMgr::Get_Instance()->PlaySoundW(L"item.wav", CSoundMgr::PLAYER);
+	CSoundMgr::Get_Instance()->PlayBGM(L"item.wav", CSoundMgr::PLAYER);
 	switch (_iItemType)
 	{
 	case 0:
@@ -415,7 +416,7 @@ void CPlayer::Take_Item(int _iItemType)
 		++m_iLengthOfBomb;
 		break;
 	case 3:
-		m_fSpeed += 0.5f;
+		m_fSpeed += 0.3f;
 		break;
 	case 4:
 		m_bNeedle = true;

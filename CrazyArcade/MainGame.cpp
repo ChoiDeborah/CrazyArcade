@@ -33,7 +33,7 @@ void CMainGame::Initialize()
 	m_dwTime = GetTickCount();
 	m_hDC = GetDC(g_hWnd);
 	CBitmapMgr::Get_Instance()->InsertBmp(L"../Resource/Texture/UI/Menu_1.bmp", L"Back");
-
+	//CSoundMgr::Get_Instance();
 	//// 작업할 도화지. 
 	CBitmapMgr::Get_Instance()->InsertBmp(L"../Resource/Texture/UI/BackGround.bmp", L"BackBuffer");
 	CSceneMgr::Get_Instance()->SceneChange(SceneID::SCENE_LOGO);
@@ -41,13 +41,13 @@ void CMainGame::Initialize()
 
 void CMainGame::Update()
 {
-	//CObjMgr::Get_Instance()->Update();
+	CObjMgr::Get_Instance()->Update();
 	CSceneMgr::Get_Instance()->Update();
 }
 
 void CMainGame::LateUpdate()
 {
-	//CObjMgr::Get_Instance()->LateUpdate();
+	CObjMgr::Get_Instance()->LateUpdate();
 	CSceneMgr::Get_Instance()->LateUpdate();
 	CKeyMgr::Get_Instance()->KeyUpdate();
 }
